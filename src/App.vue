@@ -1,11 +1,13 @@
 <script>
+import AppHeader from './components/AppHeader.vue'
 import store from './data/store.js';
 export default {
   components: {
-
+    AppHeader,
   },
 
   data() {
+
     return {
 
       store
@@ -15,10 +17,11 @@ export default {
 
   }
 }
+
 </script>
 
 <template>
-  <h1>Ciao</h1>
+  <AppHeader />
 </template>
 
 <style scoped></style>
