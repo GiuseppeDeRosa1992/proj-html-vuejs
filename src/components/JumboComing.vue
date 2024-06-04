@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative my-fs">
+    <div class="position-relative">
         <figure class="m-0 p-0">
             <img src="../assets/img/coming-jumbo.jpg" alt="" class="img-fluid">
         </figure>
