@@ -8,6 +8,7 @@ export default {
         return {
             store,
 
+            imgActive: 0,
         }
     },
 
@@ -19,7 +20,21 @@ export default {
         hideButton() {
             document.getElementById("rigth").classList.add("d-none")
             document.getElementById("left").classList.add("d-none")
-        }
+        },
+        nextImg() {
+            if (this.imgActive == 0) {
+                this.imgActive = 1
+            } else {
+                this.imgActive = 0
+            }
+        },
+        prevImg() {
+            if (this.imgActive == 0) {
+                this.imgActive = 1
+            } else {
+                this.imgActive = 0
+            }
+        },
     }
 }
 </script>
@@ -27,7 +42,8 @@ export default {
 <template>
     <div class="position-relative my-fs" @mouseover="showButton()" @mouseleave="hideButton()">
         <figure class="m-0 p-0">
-            <img src="../assets/img/slider.jpg" alt="" class="img-fluid">
+            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-if="this.imgActive == 0">
+            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-if="this.imgActive == 1">
         </figure>
         <div class="text-center w-50 position-absolute">
             <h6 class="m-0">Welcome To Our Movie Site</h6>
@@ -39,10 +55,10 @@ export default {
             </p>
             <button class="bg-success text-white rounded-pill">Read More</button>
         </div>
-        <button class="position-absolute rigth d-none bg-black" id="rigth">
+        <button class="position-absolute rigth d-none bg-black" id="rigth" @click="nextImg()">
             <i class="fa-regular fa-circle-right"></i>
         </button>
-        <button class="position-absolute left d-none bg-black" id="left">
+        <button class="position-absolute left d-none bg-black" id="left" @click="prevImg()">
             <i class="fa-regular fa-circle-left"></i>
         </button>
     </div>
@@ -78,6 +94,6 @@ button.rigth:hover {
 }
 
 .my-fs {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
 }
 </style>
