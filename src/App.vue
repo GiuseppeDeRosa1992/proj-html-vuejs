@@ -1,9 +1,11 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
+import Jumbo from './components/Jumbo.vue';
 import store from './data/store.js';
 export default {
   components: {
     AppHeader,
+    Jumbo,
   },
 
   data() {
@@ -22,6 +24,7 @@ export default {
 
 <template>
   <AppHeader />
+  <Jumbo />
 </template>
 
 <style scoped></style>
