@@ -58,6 +58,7 @@ div.position-absolute {
 button.left {
     top: 50%;
     color: white;
+    border-radius: 50%;
 }
 
 button.rigth {
@@ -65,6 +66,7 @@ button.rigth {
     left: 100%;
     transform: translate(-100%);
     color: white;
+    border-radius: 50%;
 }
 
 button.left:hover {
