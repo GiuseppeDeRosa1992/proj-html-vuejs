@@ -62,11 +62,6 @@ const iMieiDati = reactive({
 
             ]
         },
-        {
-            titolo: "Contacts",
-            link: null
-        },
-
     ],
 
     searchLinks: [

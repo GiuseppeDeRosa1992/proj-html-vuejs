@@ -80,14 +80,9 @@ export default {
 
         <hr class="m-0">
         <!-- LINK CON MENU A TENDINA -->
-        <div class="container row m-auto justify-content-between align-items-center m-0 p-0 py-2">
-            <div class="col-8 p-0">
+        <div class="container row m-auto justify-content-between align-items-center m-0 p-0 py-2 my-fs">
+            <div class="col-9 p-0">
                 <div class="row">
-                    <!-- <ul v-for="li in store.links" class="col-2 m-0 p-1 text-center">
-                        <a href="#" class="text-decoration-none">
-                            {{ li }}
-                        </a>
-                    </ul> -->
                     <template v-for="link in store.headerLinks">
                         <button class="btn dropdown-toggle col-2 m-0 p-0 text-start" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,7 +94,8 @@ export default {
                             </li>
                         </ul>
                     </template>
-
+                    <a href="#" class="col-1 p-0 text-decoration-none">Blog</a>
+                    <a href="#" class="col-1 p-0 text-decoration-none">Contacts </a>
                 </div>
             </div>
             <div class="col-1 text-end">
