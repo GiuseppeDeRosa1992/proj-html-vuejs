@@ -16,9 +16,9 @@ export default {
 <template>
     <header>
         <!-- ICONE SOCIAL E LOGIN -->
-        <div class="container m-auto row m-0 justify-content-between py-2">
+        <div class="container m-auto row m-0 justify-content-between py-2 px-0">
             <div class="col-8 p-0">
-                <div class="row">
+                <div class="row m-0">
                     <div class="col-12 p-0">
                         <i class="fa-regular fa-envelope"></i>
                         <span>Superhit Top Movie</span>
@@ -57,7 +57,7 @@ export default {
                 </figure>
             </div>
             <div class="col-6 p-0">
-                <div class="row m-0 justify-content-end">
+                <div class="row m-0 justify-content-end align-items-center">
                     <div class="col-8 p-0">
                         <div class="input-group mb-3">
                             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -69,10 +69,8 @@ export default {
                             </ul>
                             <input type="text" class="form-control" aria-label="Text input with dropdown button"
                                 placeholder="Search....">
+                            <button class="py-2 bg-success">Search</button>
                         </div>
-                    </div>
-                    <div class="col-1 p-0">
-                        <button class="py-2 bg-success">Search</button>
                     </div>
                 </div>
             </div>
@@ -81,8 +79,8 @@ export default {
         <hr class="m-0">
         <!-- LINK CON MENU A TENDINA -->
         <div class="container row m-auto justify-content-between align-items-center m-0 p-0 py-3 my-fs">
-            <div class="col-9 p-0">
-                <div class="row">
+            <div class="col-7 p-0">
+                <div class="row m-0">
                     <template v-for="link in store.headerLinks">
                         <button class="btn dropdown-toggle col-2 m-0 p-0 text-start" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,8 +96,8 @@ export default {
                     <a href="#" class="col-1 p-0 text-decoration-none">Contacts </a>
                 </div>
             </div>
-            <div class="col-1 text-end">
-                <a class="col-1">
+            <div class="col-1 text-end p-0">
+                <a>
                     <i class="fa-solid fa-bag-shopping"></i>
                 </a>
             </div>
