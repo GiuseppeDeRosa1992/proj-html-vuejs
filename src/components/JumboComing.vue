@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative">
+    <div class="position-relative my-mb">
         <figure class="m-0 p-0">
             <img src="../assets/img/coming-jumbo.jpg" alt="" class="img-fluid">
         </figure>
@@ -61,16 +61,16 @@ export default {
                 EMILY ROSE
             </p>
             <div class="row justify-content-between m-0 py-2" id="demo">
-                <div class="col-2 bg-black text-success p-0" id="days"></div>
-                <div class="col-2 bg-black text-danger p-0" id="hours"></div>
-                <div class="col-2 bg-black text-primary p-0" id="minutes"></div>
-                <div class="col-2 bg-black text-warning p-0" id="seconds"></div>
+                <div class="col-1 bg-black text-success p-0" id="days"></div>
+                <div class="col-1 bg-black text-danger p-0" id="hours"></div>
+                <div class="col-1 bg-black text-primary p-0" id="minutes"></div>
+                <div class="col-1 bg-black text-warning p-0" id="seconds"></div>
             </div>
             <div class="row justify-content-between m-0">
-                <div class="col-2 text-success p-0">Days</div>
-                <div class="col-2 text-danger p-0">Hours</div>
-                <div class="col-2 text-primary p-0">Minutes</div>
-                <div class="col-2 text-warning p-0">Seconds</div>
+                <div class="col-1 text-success p-0">Days</div>
+                <div class="col-1 text-danger p-0">Hours</div>
+                <div class="col-1 text-primary p-0">Minutes</div>
+                <div class="col-1 text-warning p-0">Seconds</div>
             </div>
         </div>
     </div>
@@ -81,5 +81,9 @@ div.position-absolute {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.my-mb {
+    margin-bottom: 4rem;
 }
 </style>

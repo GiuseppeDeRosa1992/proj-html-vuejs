@@ -80,7 +80,7 @@ export default {
 
         <hr class="m-0">
         <!-- LINK CON MENU A TENDINA -->
-        <div class="container row m-auto justify-content-between align-items-center m-0 p-0 py-2 my-fs">
+        <div class="container row m-auto justify-content-between align-items-center m-0 p-0 py-3 my-fs">
             <div class="col-9 p-0">
                 <div class="row">
                     <template v-for="link in store.headerLinks">
