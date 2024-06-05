@@ -1,43 +1,52 @@
 <script>
-import store from '../data/store.js'
-import AppSubscribe from './AppSubscribe.vue'
-import AppSingleCardMovie from './AppSingleCardMovie.vue'
-import AppSingleCardNews from './AppSingleCardNews.vue'
+import store from '../data/store.js';
+import Jumbo from './Jumbo.vue';
+import MoviePlaylist from './MoviePlaylist.vue';
+import JumboComing from './JumboComing.vue';
+import LatestNews from './LatestNews.vue';
+import AppSubscribe from './AppSubscribe.vue';
+
 
 export default {
-    name: "AppMain",
-
     components: {
-        AppSingleCardMovie,
-        AppSingleCardNews,
+        MoviePlaylist,
+        Jumbo,
+        JumboComing,
+        LatestNews,
         AppSubscribe,
-    },
 
+    },
     data() {
         return {
             store,
         }
     },
-
     methods: {
-      
     },
-
     mounted() {
-
     }
-};
-
+}
 </script>
 
 <template>
-    <div class="d-flex flex-wrap">
-        <AppSingleCardMovie v-for="movie in store.films" :card="movie" style="width: 23rem; height: 30rem;" />
-    </div>
-        <AppSingleCardNews style="width: 20rem; height: 20rem;" />
 
-<AppSubscribe />
+
+
+    <main>
+        <Jumbo />
+
+        <MoviePlaylist />
+
+        <JumboComing />
+
+        <LatestNews />
+
+        <AppSubscribe />
+
+    </main>
+
+
+
 </template>
 
-<style>
-</style>
+<style scoped></style>

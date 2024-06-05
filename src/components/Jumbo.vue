@@ -42,8 +42,8 @@ export default {
 <template>
     <div class="position-relative my-fs" @mouseover="showButton()" @mouseleave="hideButton()">
         <figure class="m-0 p-0">
-            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-if="this.imgActive == 0">
-            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-if="this.imgActive == 1">
+            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-show="this.imgActive == 0">
+            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-show="this.imgActive == 1">
         </figure>
         <div class="text-center w-50 position-absolute">
             <h6 class="m-0">Welcome To Our Movie Site</h6>
