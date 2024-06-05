@@ -45,12 +45,6 @@ export default {
 </template>
 
 <style scoped>
-.my-movie-pl {
-    border-left: solid 2px #13BE13;
-    border-bottom: solid 1px #182028;
-    margin-bottom: 6rem;
-}
-
 .my-square {
     width: calc(50% - 1rem);
     margin: 0.5rem;
