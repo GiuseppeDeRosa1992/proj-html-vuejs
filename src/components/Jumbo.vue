@@ -9,10 +9,13 @@ export default {
             store,
 
             imgActive: 0,
+
+            timer: 0
         }
     },
 
     methods: {
+        // metodi per far vedere e nascondere le frecce
         showButton() {
             document.getElementById("rigth").classList.remove("d-none")
             document.getElementById("left").classList.remove("d-none")
@@ -21,45 +24,58 @@ export default {
             document.getElementById("rigth").classList.add("d-none")
             document.getElementById("left").classList.add("d-none")
         },
+
+        // metodo per cambiare immagine visualizzata
         nextImg() {
+            clearInterval(this.timer)
             if (this.imgActive == 0) {
                 this.imgActive = 1
             } else {
                 this.imgActive = 0
             }
+            this.intervallo()
         },
-        prevImg() {
-            if (this.imgActive == 0) {
-                this.imgActive = 1
-            } else {
-                this.imgActive = 0
-            }
-        },
+
+        // timer per cambiare immagine ogni 5s
+        intervallo() {
+            this.timer = setInterval(() => {
+                if (this.imgActive == 0) {
+                    this.imgActive = 1
+                } else {
+                    this.imgActive = 0
+                }
+            }, 5000);
+        }
+    },
+    mounted() {
+        this.intervallo()
     }
 }
 </script>
 
 <template>
-    <div class="position-relative my-fs my-mb" @mouseover="showButton()" @mouseleave="hideButton()">
-        <figure class="m-0 p-0">
-            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-show="this.imgActive == 0">
-            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-show="this.imgActive == 1">
+    <div class="position-relative my-mb margin-section" @mouseover="showButton()" @mouseleave="hideButton()">
+        <!-- Immagini che scorrono -->
+        <figure class="m-0 p-0 my-jumbo-h">
+            <img src="../assets/img/slider.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 0">
+            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 1">
         </figure>
-        <div class="text-center w-25 position-absolute">
-            <h6 class="m-0">Welcome To Our Movie Site</h6>
-            <h2 class="m-0">OUR SPECIAL <b class="text-success">MOVIES</b></h2>
-            <p class="m-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus culpa rem, iusto nostrum architecto esse
-                asperiores reiciendis consequuntur exercitationem numquam autem, molestias officia, velit optio et fugit
-                sint blanditiis repellat.
-            </p>
-            <button class="bg-success text-white rounded-pill">Read More</button>
+
+        <!-- Box con testo -->
+        <div class="text-center position-absolute">
+            <div class="d-flex flex-column">
+                <h6>Welcome To Our Movie Site</h6>
+                <h1 class="my-jumbo-title">OUR SPECIAL <span class="my-green">MOVIES</span></h1>
+                <p class=" my-jumbo-p  align-self-center  my-fs">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industrioy. Lorem Ipsum has been
+                    the industry standard dummy text ever since the 1500s, when an unknown
+                </p>
+            </div>
+            <button class="my-rounded-button rounded-pill">Read More</button>
         </div>
-
+        <!-- Frecce dx/sx -->
         <i id="rigth" class="fa-solid fa-circle-chevron-right position-absolute rigth d-none" @click="nextImg()"></i>
-
-
-        <i id="left" class="fa-solid fa-circle-chevron-left position-absolute left d-none" @click="prevImg()"></i>
+        <i id="left" class="fa-solid fa-circle-chevron-left position-absolute left d-none" @click="nextImg()"></i>
 
     </div>
 </template>
@@ -67,41 +83,70 @@ export default {
 <style scoped>
 div.position-absolute {
     top: 50%;
-    left: 55%;
+    left: 60%;
     transform: translate(-50%, -50%);
+    width: 620px;
+}
+
+.my-jumbo-h {
+    height: 700px;
+    width: 100%;
 }
 
 i.left {
     top: 50%;
+    left: 2rem;
     border-radius: 50%;
     cursor: pointer;
 }
 
 i.rigth {
     top: 50%;
-    left: 100%;
+    left: calc(100% - 2rem);
     transform: translate(-100%);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .fa-solid {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
 }
 
-.fa-circle-chevron-left {
-    color: #13be13;
-}
 
+.fa-circle-chevron-left,
 .fa-circle-chevron-right {
-    color: #13be13;
+    color: #13be135d;
 }
 
 .my-fs {
-    font-size: 0.7rem;
+    font-size: 16px;
 }
 
-.my-mb {
-    margin-bottom: 4rem;
+.my-green {
+    color: #13BE13;
+    font-weight: 500;
+}
+
+.my-jumbo-title {
+    font-size: 50px;
+    font-weight: 350;
+}
+
+.my-jumbo-p {
+    width: 500px;
+    font-weight: 400;
+}
+
+.my-rounded-button {
+    padding: 0.5rem 1rem;
+    background-color: #13BE13;
+    color: white;
+    font-weight: 500;
+}
+
+/* Hover */
+.fa-circle-chevron-right:hover,
+.fa-circle-chevron-left:hover {
+    color: #13BE13;
 }
 </style>

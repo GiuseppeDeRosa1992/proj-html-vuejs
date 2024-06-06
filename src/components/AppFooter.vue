@@ -16,7 +16,9 @@ export default {
     },
 
     methods: {
-
+        getImage: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
     },
 
     mounted() {
@@ -77,21 +79,12 @@ export default {
                 </div>
                 <div class="col-3">
                     <h4>{{ store.footerLinks[3].titolo }}</h4>
-                    <div v-for="element, i in store.footerLinks[3].recent" class="d-flex mb-5">
-                        <div>
-                            <img class="recent-posts-img" :src="store.footerLinks[3].recent.img_link" alt="">
+                    <div v-for="element, i in store.news.splice(0, 3)" class="d-flex mb-3">
+                        <img class="my-foot-w me-3" :src="getImage(element.img)" alt="">
+                        <div class="d-flex flex-column fs-6">
+                            <div class="mb-2"><a class="m-0" href="">{{ element.title }}</a></div>
+                            <div>{{ element.date }}</div>
                         </div>
-                        <div class="recent-post-desc">
-                            <div>
-                                <a href="">{{ element.name }}</a>
-                            </div>
-                            <div>
-                                <span>{{ element.date }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-
                     </div>
                 </div>
             </div>
@@ -107,12 +100,35 @@ export default {
     color: white;
 }
 
+.my-foot-w {
+    width: 104px;
+    height: 104px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 footer {
-    background-color: black;
+    position: relative;
     padding: 3rem 0 1rem 0;
 }
 
-.recent-posts-img {
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: url(../assets/img/foot-bg.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+
+.img-container {
     width: 80px;
     height: 80px;
     border: 1px solid white;

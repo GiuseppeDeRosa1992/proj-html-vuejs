@@ -148,6 +148,34 @@ const iMieiDati = reactive({
         },
     ],
 
+    newsClone: [
+        {
+            title: `Actor The Concept Movie High Concept Theory See The Post`,
+            date: `14/04/2024`,
+            img: `news-1.jpg`
+        },
+        {
+            title: `Consequat Nam Lectus Nibh Aucibus It Has Turpis`,
+            date: `14/04/2024`,
+            img: `news-2.jpg`
+        },
+        {
+            title: `Nam Lectus Nibh Consequat Aucibus Turpis It Has`,
+            date: `14/04/2024`,
+            img: `news-3.jpg`
+        },
+        {
+            title: `Bring Me The Head Of Alfredo Garcia Best Movie In`,
+            date: `14/04/2024`,
+            img: `news-4.jpg`
+        },
+        {
+            title: `Pump Action Interaction English Action Movie`,
+            date: `14/04/2024`,
+            img: `news-5.jpg`
+        },
+    ],
+
     headerLinks: [
         {
             titolo: "Home",

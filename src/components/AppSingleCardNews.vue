@@ -8,9 +8,9 @@ export default {
 
     },
 
-    props:
+    props: 
         ["card"],
-
+        
 
     data() {
         return {
@@ -19,9 +19,9 @@ export default {
     },
 
     methods: {
-        getImage: function (img) {
-            return new URL(`../assets/img/${img}`, import.meta.url).href;
-        }
+        getImage: function(img) {
+                return new URL(`../assets/img/${img}`, import.meta.url).href;
+            }
     },
 
     mounted() {
@@ -62,20 +62,20 @@ export default {
 </template>
 
 <style scoped>
-* {
+*{
     color: white;
 }
 
-.card {
-    overflow: hidden;
-    border-radius: 0;
-    border: none;
+.card{
+   overflow: hidden;
+   border-radius: 0;
+   border: none;
 }
 
 img {
     width: 100%;
     height: 100%;
-
+    
 }
 
 .hidden-top-right {
@@ -91,7 +91,7 @@ img {
     width: 100%;
     height: 100%;
     position: absolute;
-
+    
 }
 
 .details {
@@ -136,7 +136,10 @@ img {
     transition: all 0.4s ease-in-out;
 }
 
-
+.share-container:not(:hover) .socials {
+    margin-right: -245px;
+    transition: all 0.4s ease-in-out;
+}
 
 
 .details:hover {
@@ -177,15 +180,15 @@ img {
 
 }
 
-.card:hover .filtro {
-    background: linear-gradient(to bottom, rgba(19, 190, 19, 0.4) 0%, rgba(125, 185, 232, 0) 100%);
+.card:hover .filtro{
+    background: linear-gradient(to bottom, rgba(19,190,19,0.4) 0%,rgba(125,185,232,0) 100%);
     transition: 400ms;
 
 }
 
 .card:hover img {
     transform: scale(1.3);
-    transition: 400ms;
+    transition: 400ms; 
 }
 
 .card:not(:hover) .hidden-top-right {
@@ -195,11 +198,6 @@ img {
 
 .card:not(:hover) img {
     transform: scale(1);
-    transition: 400ms;
-}
-
-.share-container:not(:hover) .socials {
-    margin-right: -245px;
-    transition: all 0.4s ease-in-out;
+    transition: 400ms; 
 }
 </style>

@@ -30,7 +30,7 @@ export default {
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <div class="mx-5">
-                    <input type="text" placeholder="first Name">
+                    <input type="text" placeholder="First Name">
                 </div>
                 <div class="mx-5">
                     <input type="text" placeholder="Last Name">
@@ -66,6 +66,7 @@ input {
     padding: 0.8rem 2.5rem;
     border-radius: 25px;
     margin-bottom: 5rem;
+    outline: none;
 }
 
 button {

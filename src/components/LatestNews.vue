@@ -12,12 +12,14 @@ export default {
     data() {
         return {
             store,
+            
         }
     },
     methods: {
 
     },
     mounted() {
+    
     }
 }
 </script>
@@ -32,12 +34,12 @@ export default {
 
     <div class="row container m-0 m-auto">
         <div class="col-6 px-2">
-            <AppSingleCardNews v-for="news in store.news.splice(0, 1)" :card="news" class="my-2" />
+            <AppSingleCardNews v-for="news in store.newsClone.splice(0, 1)" :card="news" class="my-2" />
         </div>
         <div class="col-6 px-2 d-flex flex-wrap">
             <!-- <div class="row">
                 <div class="col-6 px-2 pb-2"> -->
-            <AppSingleCardNews v-for="news in store.news.splice(0, 4)" :card="news" class="my-square" />
+            <AppSingleCardNews v-for="news in store.newsClone.splice(0, 4)" :card="news" class="my-square" />
             <!-- </div>
             </div> -->
         </div>

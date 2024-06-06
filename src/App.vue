@@ -1,36 +1,43 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppFooter from './components/AppFooter.vue';
 import AppMain from './components/AppMain.vue';
-import AppFixedScrollToTop from './components/AppFixedScrollToTop.vue';
-import store from './data/store.js';
+import AppFooter from './components/AppFooter.vue';
+import AppButton from './components/AppButton.vue';
+import store from './data/store.js'
+
 export default {
-  components: {
-    AppHeader,
-    AppFooter,
-    AppMain,
-    AppFixedScrollToTop,
-  },
+    name: "App",
 
-  data() {
+    components: {
+      AppHeader,
+        AppMain,
+        AppFooter,
+        AppButton,
+    },
 
-    return {
+    data() {
+        return {
+          store,
+        }
+    },
 
-      store
+    methods: {
+      
+    },
+
+    mounted() {
+
     }
-  },
-  created() {
-
-  }
-}
+};
 
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
-  <AppFixedScrollToTop />
+<AppButton />
+<AppHeader />
+<AppMain />
+<AppFooter />
 </template>
 
-<style scoped></style>
+<style>
+</style>
