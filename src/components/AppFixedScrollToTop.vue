@@ -1,4 +1,7 @@
-<script>
+<template>
+
+</template>
+<!-- <script>
 import store from '../data/store.js'
 
 export default {
@@ -63,4 +66,4 @@ export default {
 i {
     color: black;
 }
-</style>
+</style> -->
