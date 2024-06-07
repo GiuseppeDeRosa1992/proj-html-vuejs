@@ -81,10 +81,10 @@ export default {
         <!-- Selettore categorie -->
         <div class="d-flex justify-content-around my-categories-flex-w mb-5 fs-5">
             <div id="1" @click="filter = ``, clickElement()">All</div>
-            <div id="2" class="my-underline" @click="filter = `Coming Soon`, clickElement()">Coming Soon</div>
-            <div id="3" class="my-underline" @click="filter = `Latest Movie`, clickElement()">Latest Movie</div>
-            <div id="4" class="my-underline" @click="filter = `Top Rating`, clickElement()">Top Rating</div>
-            <div id="5" class="my-underline" @click="filter = `TV Series`, clickElement()">TV Series</div>
+            <div id="2" class="my-underline" @click="filter = `coming soon`, clickElement()">Coming Soon</div>
+            <div id="3" class="my-underline" @click="filter = `latest movie`, clickElement()">Latest Movie</div>
+            <div id="4" class="my-underline" @click="filter = `top rating`, clickElement()">Top Rating</div>
+            <div id="5" class="my-underline" @click="filter = `TV series`, clickElement()">TV Series</div>
         </div>
 
         <!-- Stampo cards -->
